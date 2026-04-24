@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Interview - {{ role }}</h1>
+
+    <div class="result-box">
+        <ul>
+            {% for q in questions %}
+                <li>{{ q }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <h3>Add New Question</h3>
+
+    <form action="/submit_interview" method="post">
+        <input type="hidden" name="role" value="{{ role }}">
+        <input type="text" name="new_question" placeholder="Enter new question">
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <a class="link-btn" href="/">Back</a>
+</div>
+
+</body>
+</html>

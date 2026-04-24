@@ -1,0 +1,23 @@
+{
+    "Data Scientist": [
+        "Explain bias-variance tradeoff",
+        "What is overfitting?",
+        "Explain gradient descent"
+    ],
+    "Backend Developer": [
+        "What is REST API?",
+        "Explain database indexing",
+        "What is microservices architecture?"
+    ],
+    "Frontend Developer": [
+        "What is DOM?",
+        "Explain event bubbling",
+        "What is responsive design?"
+    ],
+    "AI Engineer": [
+        "What is CNN?",
+        "Difference between TensorFlow and PyTorch",
+        "Explain model deployment",
+        "what is tensorflow"
+    ]
+}
