@@ -1,5 +1,4 @@
 flask
 PyPDF2
-scikit-learn
-sentence-transformers
+requests
 gunicorn

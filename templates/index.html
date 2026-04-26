@@ -9,18 +9,20 @@
 <div class="container">
     <h1>AI Resume Analyzer</h1>
 
-    <form action="/analyze" method="post" enctype="multipart/form-data">
-
+    <form action="/analyze" method="POST" enctype="multipart/form-data">
+        
+        <label>Upload Resume (PDF):</label>
         <input type="file" name="resume" required>
 
+        <label>Select Job Role:</label>
         <select name="role" required>
-            {% for role in roles %}
-                <option value="{{ role }}">{{ role }}</option>
-            {% endfor %}
+            <option value="">-- Select Role --</option>
+            <option value="Data Scientist">Data Scientist</option>
+            <option value="Web Developer">Web Developer</option>
+            <option value="AI Engineer">AI Engineer</option>
         </select>
 
-        <button type="submit">Analyze Resume</button>
-
+        <button type="submit">Analyze</button>
     </form>
 </div>
 
