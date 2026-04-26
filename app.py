@@ -10,7 +10,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # 🔗 Hugging Face API
-HF_API_URL = "HF_API_URL = "https://roshni123456-resumeml.hf.space/run/predict""
+HF_API_URL = "https://roshni123456-resumeml.hf.space/run/predict"
 
 # Job roles
 JOB_DESCRIPTIONS = {
