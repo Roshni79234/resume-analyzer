@@ -2,29 +2,29 @@
 <html>
 <head>
     <title>AI Resume Analyzer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<div class="container">
-    <h1>AI Resume Analyzer</h1>
+<h1>AI Resume Analyzer</h1>
 
-    <form action="/analyze" method="POST" enctype="multipart/form-data">
-        
-        <label>Upload Resume (PDF):</label>
-        <input type="file" name="resume" required>
+<form action="/analyze" method="POST" enctype="multipart/form-data">
+    
+    <label>Upload Resume:</label>
+    <input type="file" name="resume" required><br><br>
 
-        <label>Select Job Role:</label>
-        <select name="role" required>
-            <option value="">-- Select Role --</option>
-            <option value="Data Scientist">Data Scientist</option>
-            <option value="Web Developer">Web Developer</option>
-            <option value="AI Engineer">AI Engineer</option>
-        </select>
+    <label>Select Job Role:</label>
+    <select name="role" required>
+        <option value="">--Select--</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="Web Developer">Web Developer</option>
+        <option value="AI Engineer">AI Engineer</option>
+    </select><br><br>
 
-        <button type="submit">Analyze</button>
-    </form>
-</div>
+    <button type="submit">Analyze</button>
+</form>
+
+<br>
+<a href="/interview">Go to Interview</a>
 
 </body>
 </html>

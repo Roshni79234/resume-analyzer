@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Results</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .score {
+            font-size: 28px;
+            font-weight: bold;
+            color: green;
+        }
+
+        .role {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<div class="card">
     <h1>Analysis Result</h1>
 
-    <div class="result-box">
-
-        <p><b>Role:</b> {{ role }}</p>
-
-        <p><b>Your Skills:</b></p>
-        <div>
-            {% for skill in skills %}
-                <span class="skill-tag">{{ skill }}</span>
-            {% endfor %}
-        </div>
-
-        <p><b>Missing Skills:</b></p>
-        <div>
-            {% for skill in missing %}
-                <span class="missing-tag">{{ skill }}</span>
-            {% endfor %}
-        </div>
-
-        <p><b>Suggestions:</b></p>
-        <ul>
-            {% for s in suggestions %}
-                <li>{{ s }}</li>
-            {% endfor %}
-        </ul>
-
-        <p><b>Match Score:</b> {{ similarity }}%</p>
-        <div class="progress">
-            <div class="progress-bar" style="width: {{ similarity }}%;"></div>
-        </div>
-
-        <p><b>ATS Score:</b> {{ ats }}%</p>
-        <div class="progress">
-            <div class="progress-bar" style="width: {{ ats }}%;"></div>
-        </div>
-
+    <div class="role">
+        <strong>Role:</strong> {{ role }}
     </div>
 
-    <a class="link-btn" href="/interview/{{ role }}">Start Interview</a>
-    <br><br>
-    <a class="link-btn" href="/">Analyze Another</a>
+    <div class="score">
+        {{ score }}
+    </div>
 
+    <br>
+
+    <a href="/">Analyze Another Resume</a>
 </div>
 
 </body>
